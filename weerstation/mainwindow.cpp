@@ -188,6 +188,16 @@ void MainWindow::setMeasurements(WChart& chart, const QString& date)
 
 MainWindow::~MainWindow()
 {
+    for(int i = 0; i < charts.length(); i++)
+    {
+        delete charts[i];
+    }
+
+    for(int i = 0; i < buttons.length(); i++)
+    {
+        delete buttons[i];
+    }
+
     delete dbase;
     delete ui;
     delete dateInputField;
