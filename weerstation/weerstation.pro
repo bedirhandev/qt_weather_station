@@ -22,6 +22,9 @@ HEADERS += \
 FORMS += \
     mainwindow.ui
 
+INCLUDEPATH += "C:/Program Files (x86)/Visual Leak Detector/include/"
+LIBS      += -L"C:/Program Files (x86)/Visual Leak Detector/lib/Win64"
+
 # Default rules for deployment.
 qnx: target.path = /tmp/$${TARGET}/bin
 else: unix:!android: target.path = /opt/$${TARGET}/bin
