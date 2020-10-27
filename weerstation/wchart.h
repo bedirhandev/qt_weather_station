@@ -21,6 +21,12 @@ public:
     void setData(const qreal& x, const qreal& y);
     void setType(const QString& type);
     const QString& getType();
+    const QString& getTitleChart();
+    const QString& getTitleXAxis();
+    const QString& getTitleYAxis();
+    const qint16& getMinRange();
+    const qint16& getMaxRange();
+
 public:
     QtCharts::QChartView *chartView;
 private:

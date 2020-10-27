@@ -39,6 +39,32 @@ const QString& WChart::getType()
     return type;
 }
 
+const QString& WChart::getTitleChart()
+{
+    return titleChart;
+}
+
+const QString& WChart::getTitleXAxis()
+{
+    return titleXAxis;
+}
+
+const QString& WChart::getTitleYAxis()
+{
+    return titleYAxis;
+}
+
+const qint16& WChart::getMinRange()
+{
+    return minRange;
+}
+
+const qint16& WChart::getMaxRange()
+{
+    return maxRange;
+}
+
+
 void WChart::setAxesTickCount(qint16 amount)
 {
     valueAxisX->setTickCount(amount);

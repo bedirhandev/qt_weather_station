@@ -9,100 +9,150 @@ MainWindow::MainWindow(QWidget *parent) : QMainWindow(parent), ui(new Ui::MainWi
     ui->setupUi(this);
 
     setDate(QDateTime::currentDateTime().toString("yyyy-MM-dd"));
-    setupDatabase();
-    setupCharts();
-    setupUiElements();
-    setupWindow();
-}
+    setupDatabase("35.204.32.200", "root", "jwtFrfzOKfdnlsf2", "weather_station");
+    //generateSampleData(123);
 
-void MainWindow::setupDatabase()
-{
-    dbase = new DBase("35.204.32.200", "root", "jwtFrfzOKfdnlsf2", "weather_station");
-    //dbase->generateSampleData(123);
-}
+    ui->gridLayout->parentWidget()->hide();
 
-void MainWindow::setupCharts()
-{
-    charts.insert(0, new WChart(nullptr, "Temperature", "Time [m]", "Temperature [c]"));
-    charts[0]->setType("temperature");
-    charts[0]->setRangeYAxis(0, 40);
+    setupChart("Temperature", "temperature", "Time [m]", "Temperature [c]", 0, 40);
+    setupChart("Humidity", "humidity", "Time [m]", "Humidity [%]", 0, 100);
+    setupChart("Lux", "lux", "Time [m]", "Lux [lx]", 0, 1000);
 
-    charts.insert(1, new WChart(nullptr, "Humidity", "Time [m]", "Humidity [%]"));
-    charts[1]->setType("humidity");
-    charts[1]->setRangeYAxis(0, 100);
+    addItemToGridLayout(charts[0]->chartView, 0, 0);
+    addItemToGridLayout(charts[1]->chartView, 0, 1);
+    addItemToGridLayout(charts[2]->chartView, 1, 0);
 
-    charts.insert(2, new WChart(nullptr, "Lux", "Time [m]", "Lux [lx]"));
-    charts[2]->setType("lux");
-    charts[2]->setRangeYAxis(0, 1000);
+    setupButton("Back", SLOT(prevButton()));
+    setupButton("Next", SLOT(nextButton()));
+    setupButton("Update", SLOT(refreshButton()));
 
-    setMeasurements(charts, getDate());
-
-    ui->gridLayout->addWidget(charts[0]->chartView, 0, 0);
-    ui->gridLayout->addWidget(charts[1]->chartView, 0, 1);
-    ui->gridLayout->addWidget(charts[2]->chartView, 1, 0);
-
-    ui->gridLayout->parentWidget()->show();
-}
-
-void MainWindow::setupUiElements()
-{
-    buttons.append(new QPushButton("&Back", this));
-    buttons.append(new QPushButton("&Next", this));
-    buttons.append(new QPushButton("&Update", this));
-
-    connect(buttons[0], SIGNAL (released()), this, SLOT (prevButton()));
-    connect(buttons[1], SIGNAL (released()), this, SLOT (nextButton()));
-    connect(buttons[2], SIGNAL (released()), this, SLOT (refreshButton()));
-
-    ui->gridLayout->addWidget(buttons[0], 2, 0);
-    ui->gridLayout->addWidget(buttons[1], 2, 1);
-    ui->gridLayout->addWidget(buttons[2], 3, 0);
-
-    for(int i = 0; i < 2; i++) setButtons(i, false);
+    addItemToGridLayout(buttons[0], 2, 0);
+    addItemToGridLayout(buttons[1], 2, 1);
+    addItemToGridLayout(buttons[2], 3, 0);
 
     dateInputField = new QLineEdit();
     dateInputField->setText(date);
 
-    ui->gridLayout->addWidget(dateInputField, 3, 1);
+    addItemToGridLayout(dateInputField, 3, 1);
 
     updateButtons();
+
+    ui->gridLayout->parentWidget()->show();
+
+    setupWindow("Weather station", ui->gridLayoutWidget);
+}
+
+void MainWindow::setupWindow(const QString& windowTitle, QWidget* centralWidget)
+{
+    setCentralWidget(centralWidget);
+    setWindowTitle(windowTitle);
+}
+
+void MainWindow::setupDatabase(const QString& hostname, const QString& username, const QString& password, const QString& name)
+{
+    dbase = new DBase(hostname, username, password, name);
+}
+
+void MainWindow::generateSampleData(unsigned amount)
+{
+    dbase->generateSampleData(amount);
+}
+
+void MainWindow::addItemToGridLayout(QWidget* chart, unsigned posX, unsigned posY)
+{
+    ui->gridLayout->addWidget(chart, posX, posY);
+}
+
+void MainWindow::removeItemFromGridLayout(unsigned posX, unsigned posY)
+{
+    QLayoutItem* item = ui->gridLayout->itemAtPosition(posX, posY);
+    ui->gridLayout->removeItem(item);
+    delete item->widget();
+}
+
+void MainWindow::setupChart(const QString& titleChart, const QString& type, const QString& titleXAxis, const QString& titleYAxis, qint16 minRangeY, qint16 maxRangeY)
+{
+    charts.append(new WChart(nullptr, titleChart, titleXAxis, titleYAxis));
+    charts.back()->setType(type);
+    charts.back()->setRangeYAxis(minRangeY, maxRangeY);
+    setMeasurements(*charts.back(), getDate());
+}
+
+void MainWindow::setupButton(const QString& name, const char* slot) // unsigned posX, unsigned posY,
+{
+    buttons.append(new QPushButton("&" + name, this));
+    connect(buttons.back(), SIGNAL (released()), this, slot);
+    buttons.back()->hide();
 }
 
 void MainWindow::refreshButton()
 {
     dbase->page = 0;
-    clearCharts();
-    setupCharts();
+
+    for(int i = 0; i < charts.length(); i++)
+    {
+        updateChart(charts[i]);
+    }
+
     updateButtons();
 }
 
 void MainWindow::prevButton()
 {
     dbase->page -= 1;
-    clearCharts();
-    setupCharts();
+
+    for(int i = 0; i < charts.length(); i++)
+    {
+        updateChart(charts[i]);
+    }
+
     updateButtons();
 }
 
 void MainWindow::nextButton()
 {
     dbase->page += 1;
-    clearCharts();
-    setupCharts();
+
+    for(int i = 0; i < charts.length(); i++)
+    {
+        updateChart(charts[i]);
+    }
+
     updateButtons();
+}
+
+void MainWindow::updateChart(WChart* chart)
+{
+    ui->gridLayout->parentWidget()->hide();
+    WChart* tempChart = new WChart(nullptr, chart->getTitleChart(), chart->getTitleXAxis(), chart->getTitleYAxis());
+    tempChart->setType(chart->getType());
+    tempChart->setRangeYAxis(chart->getMinRange(), chart->getMaxRange());
+    setMeasurements(*tempChart, getDate());
+    ui->gridLayout->replaceWidget(chart->chartView, tempChart->chartView);
+    std::replace (charts.begin(), charts.end(), chart, tempChart);
+    ui->gridLayout->parentWidget()->show();
+    delete chart;
 }
 
 void MainWindow::updateButtons()
 {
-    if(dbase->page < 0) for(int i = 0; i < 2; i++) setButtons(i, true);
-    if(dbase->page == 0) for(int i = 0; i < 2; i++) setButtons(i, !i);
-    if((dbase->totalMeasurements + ((dbase->page - 1) * 60)) <= 0) setButtons(0, false);
-}
+    if(dbase->page < 0)
+    {
+        buttons[0]->show();
+        buttons[1]->show();
+    }
 
-void MainWindow::setButtons(qint16 index, bool active)
-{
-    if(active) buttons[index]->show();
-    else buttons[index]->hide();
+    if(dbase->page == 0)
+    {
+        buttons[0]->show();
+        buttons[1]->hide();
+        buttons[2]->show();
+    }
+
+    if((dbase->totalMeasurements + ((dbase->page - 1) * 60)) <= 0)
+    {
+        buttons[0]->hide();
+    }
 }
 
 const QString MainWindow::getDate()
@@ -116,54 +166,24 @@ void MainWindow::setDate(const QString& date)
     this->date = date;
 }
 
-void MainWindow::setupWindow()
-{
-    setCentralWidget(ui->gridLayoutWidget);
-    setWindowTitle("Weather station");
-}
-
-void MainWindow::clearCharts()
-{
-    ui->gridLayout->parentWidget()->hide();
-
-    QVector<QLayoutItem *> gridLayoutItems =
-    {
-        ui->gridLayout->itemAtPosition(0, 0),
-        ui->gridLayout->itemAtPosition(0, 1),
-        ui->gridLayout->itemAtPosition(1, 0),
-    };
-
-    for(int i = 0; i < gridLayoutItems.length(); i++)
-    {
-        ui->gridLayout->removeItem(gridLayoutItems[i]);
-        delete gridLayoutItems[i]->widget();
-    }
-
-    gridLayoutItems.clear();
-    charts.clear();
-}
-
-void MainWindow::setMeasurements(const QVector<WChart*>& charts, const QString& date)
+void MainWindow::setMeasurements(WChart& chart, const QString& date)
 {
     qint16 nMeasurements, rangeAxes = 0;
     QDateTime datetime;
 
-    for(int i = 0; i < charts.length(); i++)
+    dbase->getRecentMeasurements(chart.getType(), date);
+
+    nMeasurements = dbase->range;
+    rangeAxes = (nMeasurements < 15) ? nMeasurements : 15;
+    chart.setAxesTickCount(rangeAxes);
+
+    for(int j = 0; j < nMeasurements; j++)
     {
-        dbase->getRecentMeasurements(charts[i]->getType(), date);
-
-        nMeasurements = dbase->range;
-        rangeAxes = (nMeasurements < 15) ? nMeasurements : 15;
-        charts[i]->setAxesTickCount(rangeAxes);
-
-        for(int j = 0; j < nMeasurements; j++)
-        {
-            datetime = QDateTime::fromString(dbase->measurements[j].date, "yyyy-MM-dd HH:mm:ss.zzz");
-            charts[i]->setData(datetime.toMSecsSinceEpoch(), dbase->measurements[j].value.toDouble());
-        }
-
-        charts[i]->render();
+        datetime = QDateTime::fromString(dbase->measurements[j].date, "yyyy-MM-dd HH:mm:ss.zzz");
+        chart.setData(datetime.toMSecsSinceEpoch(), dbase->measurements[j].value.toDouble());
     }
+
+    chart.render();
 }
 
 MainWindow::~MainWindow()
