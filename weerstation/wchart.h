@@ -2,35 +2,34 @@
 #define WCHART_H
 
 #include <QWidget>
-#include <QBarSet>
+#include <QLineSeries>
 #include <QtCharts/QChartView>
 #include <QtCharts/QBarCategoryAxis>
 #include <QtCharts/QBarSeries>
 #include <QtCharts/QValueAxis>
+#include <QDateTimeAxis>
 
 class WChart : public QWidget
 {
     Q_OBJECT
 public:
-    explicit WChart(QWidget *parent = nullptr);
+    explicit WChart(QWidget *parent = nullptr, const QString& titleChart = "", const QString& titleXAxis = "", const QString& titleYAxis = "");
     ~WChart();
-
-    void setBar(qreal value);
-    void setTitleAxisX(const QString& value);
-    void setTitleAxisY(const QString& value);
-    void setMainTitle(const QString& value);
-    void setRange(qint16 min, qint16 max);
-    void setAxisX(const QString& value);
-
+    void render();
+    void setRangeYAxis(qint16 min, qint16 max);
+    void setAxesTickCount(qint16 amount);
+    void setData(const qreal& x, const qreal& y);
+    void setType(const QString& type);
+    const QString& getType();
 public:
     QtCharts::QChartView *chartView;
-
 private:
-    QtCharts::QValueAxis* valueAxisY;
-    QtCharts::QBarCategoryAxis* barAxisX;
-    QtCharts::QBarSet* barSet;
+    QtCharts::QValueAxis *valueAxisY;
+    QtCharts::QDateTimeAxis *valueAxisX;
     QtCharts::QChart *chart;
-    QtCharts::QBarSeries* series;
+    QtCharts::QLineSeries *series;
+    QString type, titleChart, titleXAxis, titleYAxis;
+    qint16 minRange, maxRange;
 };
 
 #endif // WCHART_H

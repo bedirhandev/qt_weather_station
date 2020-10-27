@@ -1,74 +1,75 @@
 #include "wchart.h"
 
-WChart::WChart(QWidget *parent) : QWidget(parent)
+WChart::WChart(QWidget *parent, const QString& titleChart, const QString& titleXAxis, const QString& titleYAxis) : QWidget(parent)
 {
-    barAxisX = new QtCharts::QBarCategoryAxis();
-    barAxisX->setTitleText("");
-    barAxisX->insert(0, "");
+    this->titleChart = titleChart;
+    this->titleXAxis = titleXAxis;
+    this->titleYAxis = titleYAxis;
 
     valueAxisY = new QtCharts::QValueAxis();
-    valueAxisY->setTitleText("");
-    valueAxisY->setRange(0, 0);
+    valueAxisY->setTitleText(titleYAxis);
 
-    series = new QtCharts::QBarSeries();
+    valueAxisX = new QtCharts::QDateTimeAxis();
+    valueAxisX->setTitleText(titleXAxis);
+    valueAxisX->setFormat("HH:mm");
 
+    series = new QtCharts::QLineSeries();
     chart = new QtCharts::QChart();
-    chart->addSeries(series);
-
-    chart->addAxis(barAxisX, Qt::AlignBottom);
-    chart->addAxis(valueAxisY, Qt::AlignLeft);
-    chart->setTitle("");
-
-    chart->legend()->setVisible(true);
-    chart->legend()->setAlignment(Qt::AlignBottom);
-
-    series->attachAxis(barAxisX);
-    series->attachAxis(valueAxisY);
-
-    barSet = new QtCharts::QBarSet("");
-    barSet->insert(0, 0.0);
+    chart->setTitle(titleChart);
 
     chartView = new QtCharts::QChartView(chart);
     chartView->setRenderHint(QPainter::Antialiasing);
 }
 
-void WChart::setBar(qreal value)
+void WChart::setRangeYAxis(qint16 min, qint16 max)
 {
-    barSet->insert(0, value);
-    series->insert(0, barSet);
+    minRange = min;
+    maxRange = max;
+
+    valueAxisY->setRange(minRange, maxRange);
 }
 
-void WChart::setAxisX(const QString& value)
+void WChart::setType(const QString& type)
 {
-    barAxisX->insert(0, value);
+    this->type = type;
 }
 
-void WChart::setMainTitle(const QString &value)
+const QString& WChart::getType()
 {
-    chart->setTitle(value);
-    barSet->setLabel(value);
+    return type;
 }
 
-void WChart::setTitleAxisX(const QString &value)
+void WChart::setAxesTickCount(qint16 amount)
 {
-    barAxisX->setTitleText(value);
+    valueAxisX->setTickCount(amount);
+    valueAxisY->setTickCount(amount);
 }
 
-void WChart::setTitleAxisY(const QString &value)
+void WChart::setData(const qreal& x, const qreal& y)
 {
-    valueAxisY->setTitleText(value);
+    series->append(x, y);
 }
 
-void WChart::setRange(qint16 min, qint16 max)
+void WChart::render()
 {
-    valueAxisY->setRange(min, max);
+    chart->addSeries(series);
+
+    chart->addAxis(valueAxisX, Qt::AlignBottom);
+    chart->addAxis(valueAxisY, Qt::AlignLeft);
+
+    series->attachAxis(valueAxisX);
+    series->attachAxis(valueAxisY);
+
+    chart->legend()->hide();
+
+    chart->update();
+    chartView->update();
 }
 
 WChart::~WChart()
 {
-    delete barAxisX;
+    delete valueAxisX;
     delete valueAxisY;
-    delete barSet;
     delete series;
     delete chart;
     delete chartView;
