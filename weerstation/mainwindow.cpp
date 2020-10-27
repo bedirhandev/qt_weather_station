@@ -126,7 +126,7 @@ void MainWindow::updateChart(WChart* chart)
     ui->gridLayout->parentWidget()->hide();
     WChart* tempChart = new WChart(nullptr, chart->getTitleChart(), chart->getTitleXAxis(), chart->getTitleYAxis());
     tempChart->setType(chart->getType());
-    tempChart->setRangeYAxis(chart->getMinRange(), chart->getMaxRange());
+    tempChart->setRangeYAxis(chart->getMinRangeYAxis(), chart->getMaxRangeYAxis());
     setMeasurements(*tempChart, getDate());
     ui->gridLayout->replaceWidget(chart->chartView, tempChart->chartView);
     std::replace (charts.begin(), charts.end(), chart, tempChart);

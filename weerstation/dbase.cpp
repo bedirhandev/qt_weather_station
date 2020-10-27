@@ -32,10 +32,13 @@ double DBase::fRand(double fMin, double fMax)
 
 double DBase::round(double var)
 {
-    // 37.66666 * 100 =3766.66
-    // 3766.66 + .5 =3767.16    for rounding off value
-    // then type cast to int so value is 3767
-    // then divided by 100 so the value converted into 37.67
+    ///  Example:
+    ///  \code
+    /// 17.66666 * 100 = 1766.66
+    /// 1766.66 + .5 = 1767.16 for rounding off value
+    /// then type cast to int so value is 1767
+    /// then divided by 100 so the value converted into 17.67
+    /// \endcode
     double value = (int)(var * 100 + .5);
     return (double)value / 100;
 }

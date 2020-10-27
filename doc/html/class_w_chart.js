@@ -1,0 +1,27 @@
+var class_w_chart =
+[
+    [ "WChart", "class_w_chart.html#a0be59ee8daa151f929bc2f10582e9070", null ],
+    [ "~WChart", "class_w_chart.html#a9e10dc9b9204f77716a65f2e7f899196", null ],
+    [ "getMaxRangeYAxis", "class_w_chart.html#abbc901d07a0e362d4794719ce76ced2b", null ],
+    [ "getMinRangeYAxis", "class_w_chart.html#a7ec3b84d5854a3be7c16263c58b2d5cc", null ],
+    [ "getTitleChart", "class_w_chart.html#a042026933ca918f8096f2bbed23534f1", null ],
+    [ "getTitleXAxis", "class_w_chart.html#aeeb1945735d81e2d9d738781b509d394", null ],
+    [ "getTitleYAxis", "class_w_chart.html#abf767e3f64b21274e33c7862baf19143", null ],
+    [ "getType", "class_w_chart.html#a2a0b7f76b53b5fcbfe2d2271969ccf1f", null ],
+    [ "render", "class_w_chart.html#aa02a0f53f266b7590f0a2513d718ad85", null ],
+    [ "setAxesTickCount", "class_w_chart.html#ae452f883de4c6d00e5487a758c9d3ee2", null ],
+    [ "setData", "class_w_chart.html#ae6a8250d172fe21c4b8751509bc5fa0a", null ],
+    [ "setRangeYAxis", "class_w_chart.html#ab993005ec917ad45989ed79c2aea81f5", null ],
+    [ "setType", "class_w_chart.html#a7d96ec687bd8bbd4f080a0694424c0df", null ],
+    [ "chart", "class_w_chart.html#acbe3fc1e25d1a1f021ec2167f2871801", null ],
+    [ "chartView", "class_w_chart.html#a47a452f4b9021d6db2c2674a0258bc1e", null ],
+    [ "maxRange", "class_w_chart.html#a884ed920c7f12e0fa3868367fc725a49", null ],
+    [ "minRange", "class_w_chart.html#a966e2d7063052660346978a68043c582", null ],
+    [ "series", "class_w_chart.html#a53e92f6b17f52fe79b91c28f153b7f0d", null ],
+    [ "titleChart", "class_w_chart.html#a9110ba7ef07e7ef36cce5cf77f1dfc56", null ],
+    [ "titleXAxis", "class_w_chart.html#a1fe99f81703c3bb65c6d1078330de418", null ],
+    [ "titleYAxis", "class_w_chart.html#ab80b70061415f22c3fffb3f2728e8b2c", null ],
+    [ "type", "class_w_chart.html#ab062d6b447405f6d15003ef8c0f665eb", null ],
+    [ "valueAxisX", "class_w_chart.html#a51f1337f543bea422f480eaf7c9475a0", null ],
+    [ "valueAxisY", "class_w_chart.html#a30f858159aa95a31c66d8a11691a7d7b", null ]
+];

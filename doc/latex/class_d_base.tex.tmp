@@ -1,0 +1,59 @@
+\hypertarget{class_d_base}{}\doxysection{D\+Base Class Reference}
+\label{class_d_base}\index{DBase@{DBase}}
+
+
+Collaboration diagram for D\+Base\+:
+% FIG 0
+\doxysubsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \mbox{\hyperlink{struct_d_base_1_1measurement}{measurement}}
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_d_base_a2089d8c0a7939555d0e388b3a8e6cbcc}\label{class_d_base_a2089d8c0a7939555d0e388b3a8e6cbcc}} 
+{\bfseries D\+Base} (const Q\+String \&hostname, const Q\+String \&username, const Q\+String \&password, const Q\+String \&name)
+\item 
+\mbox{\Hypertarget{class_d_base_a1d69f7443cc21928794dfaa898f49c09}\label{class_d_base_a1d69f7443cc21928794dfaa898f49c09}} 
+bool {\bfseries is\+Open} () const
+\item 
+\mbox{\Hypertarget{class_d_base_a61f8a8530324221ef5bd4861e2724cb9}\label{class_d_base_a61f8a8530324221ef5bd4861e2724cb9}} 
+void {\bfseries get\+Recent\+Measurements} (const Q\+String \&filter, const Q\+String \&date)
+\item 
+\mbox{\Hypertarget{class_d_base_a4445126c41a6020b2a71c58f2e50646e}\label{class_d_base_a4445126c41a6020b2a71c58f2e50646e}} 
+void {\bfseries generate\+Sample\+Data} (unsigned amount)
+\item 
+\mbox{\Hypertarget{class_d_base_a1f5bf34646da0d763dc9c30cbcf0b4d5}\label{class_d_base_a1f5bf34646da0d763dc9c30cbcf0b4d5}} 
+double {\bfseries f\+Rand} (double f\+Min, double f\+Max)
+\item 
+\mbox{\Hypertarget{class_d_base_a9420e43c16bd790cc70006c90b357611}\label{class_d_base_a9420e43c16bd790cc70006c90b357611}} 
+double {\bfseries round} (double var)
+\end{DoxyCompactItemize}
+\doxysubsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_d_base_a77c92925b0919e3f1ebcc38586145539}\label{class_d_base_a77c92925b0919e3f1ebcc38586145539}} 
+struct \mbox{\hyperlink{struct_d_base_1_1measurement}{D\+Base\+::measurement}} {\bfseries measurements} \mbox{[}60\mbox{]}
+\item 
+\mbox{\Hypertarget{class_d_base_aaa68a7ba7fbdf163754e6faf53331692}\label{class_d_base_aaa68a7ba7fbdf163754e6faf53331692}} 
+int {\bfseries total\+Measurements}
+\item 
+\mbox{\Hypertarget{class_d_base_ab77cec0b55b28ab288d75669ac7d53d8}\label{class_d_base_ab77cec0b55b28ab288d75669ac7d53d8}} 
+int {\bfseries page}
+\item 
+\mbox{\Hypertarget{class_d_base_af38296e9b7e5b7a0e66de2222c5fec7d}\label{class_d_base_af38296e9b7e5b7a0e66de2222c5fec7d}} 
+int {\bfseries range}
+\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_d_base_a0e78d6ee313e0ff4cf062f3d4852a666}\label{class_d_base_a0e78d6ee313e0ff4cf062f3d4852a666}} 
+Q\+Sql\+Database {\bfseries m\+\_\+db}
+\end{DoxyCompactItemize}
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+C\+:/git/projects/weather\+\_\+station/qt/weerstation/dbase.\+h\item 
+C\+:/git/projects/weather\+\_\+station/qt/weerstation/dbase.\+cpp\end{DoxyCompactItemize}

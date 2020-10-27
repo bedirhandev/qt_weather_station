@@ -1,0 +1,428 @@
+\hypertarget{class_main_window}{}\doxysection{Main\+Window Class Reference}
+\label{class_main_window}\index{MainWindow@{MainWindow}}
+
+
+The presentation layer class.  
+
+
+
+
+{\ttfamily \#include \char`\"{}mainwindow.\+h\char`\"{}}
+
+
+
+Inherits Q\+Main\+Window.
+
+\doxysubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{class_main_window_a996c5a2b6f77944776856f08ec30858d}{Main\+Window}} (Q\+Widget $\ast$parent=nullptr)
+\begin{DoxyCompactList}\small\item\em Creates the main window. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_main_window_ae98d00a93bc118200eeef9f9bba1dba7}{$\sim$\+Main\+Window}} ()
+\begin{DoxyCompactList}\small\item\em Destroys the main window. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Slots}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{class_main_window_a697eee212c8506177ed31f5bf6e2e7ce}{refresh\+Button}} ()
+\begin{DoxyCompactList}\small\item\em Updates the charts, buttons and the gridlayout based on the page value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_window_a6837f42da731e6c579f4efeb60a3cc46}{prev\+Button}} ()
+\begin{DoxyCompactList}\small\item\em Updates the charts, buttons and the gridlayout based on the page value. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_window_a32ab47d4d68b1bcb64ed9aa35ebe6861}{next\+Button}} ()
+\begin{DoxyCompactList}\small\item\em Updates the charts, buttons and the gridlayout based on the page value. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+const Q\+String \mbox{\hyperlink{class_main_window_add8c55ae786d4d0a5f6c47cf0ce8a66a}{get\+Date}} ()
+\begin{DoxyCompactList}\small\item\em Gets the date from the date\+Input\+Field field. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_window_aed1b045f0abdec02815b9aca822b0c19}{set\+Date}} (const Q\+String \&\mbox{\hyperlink{class_main_window_ac544e1f4490638902197d63ae3608369}{date}})
+\begin{DoxyCompactList}\small\item\em Sets the date from a given string. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_window_aa0bb1213c5388f0a43f41e248b4446c9}{setup\+Database}} (const Q\+String \&hostname, const Q\+String \&username, const Q\+String \&password, const Q\+String \&name)
+\begin{DoxyCompactList}\small\item\em Initializes a database connection. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_window_a239bf53997891ad4eecbc1bc50d13bfd}{generate\+Sample\+Data}} (unsigned amount)
+\begin{DoxyCompactList}\small\item\em Generates fake sample data for the measurement tbl. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_window_a54ef08c90b99fece006e8ade46b665b7}{set\+Measurements}} (\mbox{\hyperlink{class_w_chart}{W\+Chart}} \&chart, const Q\+String \&\mbox{\hyperlink{class_main_window_ac544e1f4490638902197d63ae3608369}{date}})
+\begin{DoxyCompactList}\small\item\em Gets data from the measurement tbl and puts the data into the chart. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_window_aa783b8cabd2165114d1c8ab5c1989e65}{setup\+Chart}} (const Q\+String \&title\+Chart, const Q\+String \&type, const Q\+String \&title\+X\+Axis, const Q\+String \&title\+Y\+Axis, qint16 min\+RangeY, qint16 max\+RangeY)
+\begin{DoxyCompactList}\small\item\em Initializes a database connection. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_window_a1b47836971ac247a6608d3237be51cbb}{update\+Chart}} (\mbox{\hyperlink{class_w_chart}{W\+Chart}} $\ast$chart)
+\begin{DoxyCompactList}\small\item\em Updates the chart with new data and renews the gridlayout. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_window_a2af2e4e33c2459dcf1bb45300b1cf3f6}{setup\+Button}} (const Q\+String \&name, const char $\ast$slot)
+\begin{DoxyCompactList}\small\item\em Creates a button with an event trigger. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_window_ad6ddd0b30d7347496095973027a8d86b}{update\+Buttons}} ()
+\begin{DoxyCompactList}\small\item\em Updates the buttons depending on some states. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_window_a563dbcc8beede54f06d993ccf442fcf7}{add\+Item\+To\+Grid\+Layout}} (Q\+Widget $\ast$item, unsigned posX, unsigned posY)
+\begin{DoxyCompactList}\small\item\em Adds a new widget to the grid layout. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_window_a08cdee45855249bb556c2dbf721ac2d4}{remove\+Item\+From\+Grid\+Layout}} (unsigned posX, unsigned posY)
+\begin{DoxyCompactList}\small\item\em Removes a widget from the grid layout based on the row and column of that item. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_main_window_a7b11ef428cdc2fce193e2244d2593b83}{setup\+Window}} (const Q\+String \&window\+Title, Q\+Widget $\ast$central\+Widget)
+\begin{DoxyCompactList}\small\item\em Sets a window title and sets the central widget of the main window. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\Hypertarget{class_main_window_ac544e1f4490638902197d63ae3608369}\label{class_main_window_ac544e1f4490638902197d63ae3608369}} 
+Q\+String \mbox{\hyperlink{class_main_window_ac544e1f4490638902197d63ae3608369}{date}}
+\begin{DoxyCompactList}\small\item\em Stores the current date or date that is coming from the input field. \end{DoxyCompactList}\item 
+Q\+Line\+Edit $\ast$ \mbox{\hyperlink{class_main_window_a69cdda2dbaee36f89640399b6692c0f8}{date\+Input\+Field}}
+\begin{DoxyCompactList}\small\item\em The widget which behaves as a user input field. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_main_window_a95dd7ae11ab424b16e4e79903b868fcb}\label{class_main_window_a95dd7ae11ab424b16e4e79903b868fcb}} 
+Q\+Vector$<$ \mbox{\hyperlink{class_w_chart}{W\+Chart}} $\ast$ $>$ \mbox{\hyperlink{class_main_window_a95dd7ae11ab424b16e4e79903b868fcb}{charts}}
+\begin{DoxyCompactList}\small\item\em A vector type data stores the view of all charts and manages the life-\/cycle. \end{DoxyCompactList}\item 
+\mbox{\Hypertarget{class_main_window_a4035d71928773bdcf0f9e83192786cce}\label{class_main_window_a4035d71928773bdcf0f9e83192786cce}} 
+Q\+Vector$<$ Q\+Push\+Button $\ast$ $>$ \mbox{\hyperlink{class_main_window_a4035d71928773bdcf0f9e83192786cce}{buttons}}
+\begin{DoxyCompactList}\small\item\em A vector type data stores all buttons present and manages the life-\/cycle. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_d_base}{D\+Base}} $\ast$ \mbox{\hyperlink{class_main_window_a64cbbcda4fd981cd31d5f4bec34d14a6}{dbase}}
+\begin{DoxyCompactList}\small\item\em The database class instance. \end{DoxyCompactList}\item 
+Ui\+::\+Main\+Window $\ast$ \mbox{\hyperlink{class_main_window_a43606649aeaf9e561328935fca0cd1bf}{ui}}
+\begin{DoxyCompactList}\small\item\em The \mbox{\hyperlink{class_main_window}{Main\+Window}} class is used to store the mainwindow.\+ui class generated by the Qt. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+The presentation layer class. 
+
+In the presentation layer every aspect of the lifecycle of a widget is managed by this class. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_main_window_a996c5a2b6f77944776856f08ec30858d}\label{class_main_window_a996c5a2b6f77944776856f08ec30858d}} 
+\index{MainWindow@{MainWindow}!MainWindow@{MainWindow}}
+\index{MainWindow@{MainWindow}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{MainWindow()}{MainWindow()}}
+{\footnotesize\ttfamily Main\+Window\+::\+Main\+Window (\begin{DoxyParamCaption}\item[{Q\+Widget $\ast$}]{parent = {\ttfamily nullptr} }\end{DoxyParamCaption})}
+
+
+
+Creates the main window. 
+
+The constructor. \begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_main_window_ae98d00a93bc118200eeef9f9bba1dba7}\label{class_main_window_ae98d00a93bc118200eeef9f9bba1dba7}} 
+\index{MainWindow@{MainWindow}!````~MainWindow@{$\sim$MainWindow}}
+\index{````~MainWindow@{$\sim$MainWindow}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{$\sim$MainWindow()}{~MainWindow()}}
+{\footnotesize\ttfamily Main\+Window\+::$\sim$\+Main\+Window (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destroys the main window. 
+
+The destructor. \begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_main_window_a563dbcc8beede54f06d993ccf442fcf7}\label{class_main_window_a563dbcc8beede54f06d993ccf442fcf7}} 
+\index{MainWindow@{MainWindow}!addItemToGridLayout@{addItemToGridLayout}}
+\index{addItemToGridLayout@{addItemToGridLayout}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{addItemToGridLayout()}{addItemToGridLayout()}}
+{\footnotesize\ttfamily void Main\+Window\+::add\+Item\+To\+Grid\+Layout (\begin{DoxyParamCaption}\item[{Q\+Widget $\ast$}]{item,  }\item[{unsigned}]{posX,  }\item[{unsigned}]{posY }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Adds a new widget to the grid layout. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em item} & \\
+\hline
+{\em posX} & \\
+\hline
+{\em posY} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_main_window_a239bf53997891ad4eecbc1bc50d13bfd}\label{class_main_window_a239bf53997891ad4eecbc1bc50d13bfd}} 
+\index{MainWindow@{MainWindow}!generateSampleData@{generateSampleData}}
+\index{generateSampleData@{generateSampleData}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{generateSampleData()}{generateSampleData()}}
+{\footnotesize\ttfamily void Main\+Window\+::generate\+Sample\+Data (\begin{DoxyParamCaption}\item[{unsigned}]{amount }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Generates fake sample data for the measurement tbl. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em amount} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_main_window_add8c55ae786d4d0a5f6c47cf0ce8a66a}\label{class_main_window_add8c55ae786d4d0a5f6c47cf0ce8a66a}} 
+\index{MainWindow@{MainWindow}!getDate@{getDate}}
+\index{getDate@{getDate}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{getDate()}{getDate()}}
+{\footnotesize\ttfamily const Q\+String Main\+Window\+::get\+Date (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Gets the date from the date\+Input\+Field field. 
+
+\begin{DoxyReturn}{Returns}
+const Q\+String 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_main_window_a32ab47d4d68b1bcb64ed9aa35ebe6861}\label{class_main_window_a32ab47d4d68b1bcb64ed9aa35ebe6861}} 
+\index{MainWindow@{MainWindow}!nextButton@{nextButton}}
+\index{nextButton@{nextButton}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{nextButton}{nextButton}}
+{\footnotesize\ttfamily void Main\+Window\+::next\+Button (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Updates the charts, buttons and the gridlayout based on the page value. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_main_window_a6837f42da731e6c579f4efeb60a3cc46}\label{class_main_window_a6837f42da731e6c579f4efeb60a3cc46}} 
+\index{MainWindow@{MainWindow}!prevButton@{prevButton}}
+\index{prevButton@{prevButton}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{prevButton}{prevButton}}
+{\footnotesize\ttfamily void Main\+Window\+::prev\+Button (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Updates the charts, buttons and the gridlayout based on the page value. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_main_window_a697eee212c8506177ed31f5bf6e2e7ce}\label{class_main_window_a697eee212c8506177ed31f5bf6e2e7ce}} 
+\index{MainWindow@{MainWindow}!refreshButton@{refreshButton}}
+\index{refreshButton@{refreshButton}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{refreshButton}{refreshButton}}
+{\footnotesize\ttfamily Main\+Window\+::refresh\+Button (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}, {\ttfamily [slot]}}
+
+
+
+Updates the charts, buttons and the gridlayout based on the page value. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_main_window_a08cdee45855249bb556c2dbf721ac2d4}\label{class_main_window_a08cdee45855249bb556c2dbf721ac2d4}} 
+\index{MainWindow@{MainWindow}!removeItemFromGridLayout@{removeItemFromGridLayout}}
+\index{removeItemFromGridLayout@{removeItemFromGridLayout}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{removeItemFromGridLayout()}{removeItemFromGridLayout()}}
+{\footnotesize\ttfamily void Main\+Window\+::remove\+Item\+From\+Grid\+Layout (\begin{DoxyParamCaption}\item[{unsigned}]{posX,  }\item[{unsigned}]{posY }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Removes a widget from the grid layout based on the row and column of that item. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em posX} & \\
+\hline
+{\em posY} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_main_window_aed1b045f0abdec02815b9aca822b0c19}\label{class_main_window_aed1b045f0abdec02815b9aca822b0c19}} 
+\index{MainWindow@{MainWindow}!setDate@{setDate}}
+\index{setDate@{setDate}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{setDate()}{setDate()}}
+{\footnotesize\ttfamily void Main\+Window\+::set\+Date (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{date }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Sets the date from a given string. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em date} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_main_window_a54ef08c90b99fece006e8ade46b665b7}\label{class_main_window_a54ef08c90b99fece006e8ade46b665b7}} 
+\index{MainWindow@{MainWindow}!setMeasurements@{setMeasurements}}
+\index{setMeasurements@{setMeasurements}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{setMeasurements()}{setMeasurements()}}
+{\footnotesize\ttfamily void Main\+Window\+::set\+Measurements (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_w_chart}{W\+Chart}} \&}]{chart,  }\item[{const Q\+String \&}]{date }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Gets data from the measurement tbl and puts the data into the chart. 
+
+\begin{DoxyPrecond}{Precondition}
+The value of amount must not be negative 
+\end{DoxyPrecond}
+
+\begin{DoxyParams}{Parameters}
+{\em chart} & \\
+\hline
+{\em date} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_main_window_a2af2e4e33c2459dcf1bb45300b1cf3f6}\label{class_main_window_a2af2e4e33c2459dcf1bb45300b1cf3f6}} 
+\index{MainWindow@{MainWindow}!setupButton@{setupButton}}
+\index{setupButton@{setupButton}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{setupButton()}{setupButton()}}
+{\footnotesize\ttfamily void Main\+Window\+::setup\+Button (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{name,  }\item[{const char $\ast$}]{slot }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Creates a button with an event trigger. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & \\
+\hline
+{\em slot} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_main_window_aa783b8cabd2165114d1c8ab5c1989e65}\label{class_main_window_aa783b8cabd2165114d1c8ab5c1989e65}} 
+\index{MainWindow@{MainWindow}!setupChart@{setupChart}}
+\index{setupChart@{setupChart}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{setupChart()}{setupChart()}}
+{\footnotesize\ttfamily void Main\+Window\+::setup\+Chart (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{title\+Chart,  }\item[{const Q\+String \&}]{type,  }\item[{const Q\+String \&}]{title\+X\+Axis,  }\item[{const Q\+String \&}]{title\+Y\+Axis,  }\item[{qint16}]{min\+RangeY,  }\item[{qint16}]{max\+RangeY }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Initializes a database connection. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em title\+Chart} & \\
+\hline
+{\em type} & \\
+\hline
+{\em title\+X\+Axis} & \\
+\hline
+{\em title\+Y\+Axis} & \\
+\hline
+{\em min\+RangeY} & \\
+\hline
+{\em max\+RangeY} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_main_window_aa0bb1213c5388f0a43f41e248b4446c9}\label{class_main_window_aa0bb1213c5388f0a43f41e248b4446c9}} 
+\index{MainWindow@{MainWindow}!setupDatabase@{setupDatabase}}
+\index{setupDatabase@{setupDatabase}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{setupDatabase()}{setupDatabase()}}
+{\footnotesize\ttfamily void Main\+Window\+::setup\+Database (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{hostname,  }\item[{const Q\+String \&}]{username,  }\item[{const Q\+String \&}]{password,  }\item[{const Q\+String \&}]{name }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Initializes a database connection. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em hostname} & \\
+\hline
+{\em username} & \\
+\hline
+{\em password} & \\
+\hline
+{\em name} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_main_window_a7b11ef428cdc2fce193e2244d2593b83}\label{class_main_window_a7b11ef428cdc2fce193e2244d2593b83}} 
+\index{MainWindow@{MainWindow}!setupWindow@{setupWindow}}
+\index{setupWindow@{setupWindow}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{setupWindow()}{setupWindow()}}
+{\footnotesize\ttfamily void Main\+Window\+::setup\+Window (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{window\+Title,  }\item[{Q\+Widget $\ast$}]{central\+Widget }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Sets a window title and sets the central widget of the main window. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em window\+Title} & \\
+\hline
+{\em central\+Widget} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_main_window_ad6ddd0b30d7347496095973027a8d86b}\label{class_main_window_ad6ddd0b30d7347496095973027a8d86b}} 
+\index{MainWindow@{MainWindow}!updateButtons@{updateButtons}}
+\index{updateButtons@{updateButtons}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{updateButtons()}{updateButtons()}}
+{\footnotesize\ttfamily void Main\+Window\+::update\+Buttons (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Updates the buttons depending on some states. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_main_window_a1b47836971ac247a6608d3237be51cbb}\label{class_main_window_a1b47836971ac247a6608d3237be51cbb}} 
+\index{MainWindow@{MainWindow}!updateChart@{updateChart}}
+\index{updateChart@{updateChart}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{updateChart()}{updateChart()}}
+{\footnotesize\ttfamily void Main\+Window\+::update\+Chart (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{class_w_chart}{W\+Chart}} $\ast$}]{chart }\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+Updates the chart with new data and renews the gridlayout. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em chart} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_main_window_a69cdda2dbaee36f89640399b6692c0f8}\label{class_main_window_a69cdda2dbaee36f89640399b6692c0f8}} 
+\index{MainWindow@{MainWindow}!dateInputField@{dateInputField}}
+\index{dateInputField@{dateInputField}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{dateInputField}{dateInputField}}
+{\footnotesize\ttfamily Q\+Line\+Edit $\ast$ Main\+Window\+::date\+Input\+Field\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The widget which behaves as a user input field. 
+
+The user input field where a date could be specified. \mbox{\Hypertarget{class_main_window_a64cbbcda4fd981cd31d5f4bec34d14a6}\label{class_main_window_a64cbbcda4fd981cd31d5f4bec34d14a6}} 
+\index{MainWindow@{MainWindow}!dbase@{dbase}}
+\index{dbase@{dbase}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{dbase}{dbase}}
+{\footnotesize\ttfamily \mbox{\hyperlink{class_d_base}{D\+Base}} $\ast$ Main\+Window\+::dbase\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The database class instance. 
+
+Manages all income/outcome traffic with the database server. \mbox{\Hypertarget{class_main_window_a43606649aeaf9e561328935fca0cd1bf}\label{class_main_window_a43606649aeaf9e561328935fca0cd1bf}} 
+\index{MainWindow@{MainWindow}!ui@{ui}}
+\index{ui@{ui}!MainWindow@{MainWindow}}
+\doxysubsubsection{\texorpdfstring{ui}{ui}}
+{\footnotesize\ttfamily Ui\+::\+Main\+Window $\ast$ Main\+Window\+::ui\hspace{0.3cm}{\ttfamily [private]}}
+
+
+
+The \mbox{\hyperlink{class_main_window}{Main\+Window}} class is used to store the mainwindow.\+ui class generated by the Qt. 
+
+Manages the design view of the application window. 
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+weerstation/\mbox{\hyperlink{mainwindow_8h}{mainwindow.\+h}}\item 
+weerstation/mainwindow.\+cpp\end{DoxyCompactItemize}

@@ -21,7 +21,7 @@ WChart::WChart(QWidget *parent, const QString& titleChart, const QString& titleX
     chartView->setRenderHint(QPainter::Antialiasing);
 }
 
-void WChart::setRangeYAxis(qint16 min, qint16 max)
+void WChart::setRangeYAxis(unsigned min, unsigned max)
 {
     minRange = min;
     maxRange = max;
@@ -54,18 +54,18 @@ const QString& WChart::getTitleYAxis()
     return titleYAxis;
 }
 
-const qint16& WChart::getMinRange()
+const qint16& WChart::getMinRangeYAxis()
 {
     return minRange;
 }
 
-const qint16& WChart::getMaxRange()
+const qint16& WChart::getMaxRangeYAxis()
 {
     return maxRange;
 }
 
 
-void WChart::setAxesTickCount(qint16 amount)
+void WChart::setAxesTickCount(unsigned amount)
 {
     valueAxisX->setTickCount(amount);
     valueAxisY->setTickCount(amount);
