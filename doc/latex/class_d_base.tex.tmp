@@ -2,6 +2,15 @@
 \label{class_d_base}\index{DBase@{DBase}}
 
 
+The data layer class.  
+
+
+
+
+{\ttfamily \#include \char`\"{}dbase.\+h\char`\"{}}
+
+
+
 Collaboration diagram for D\+Base\+:
 % FIG 0
 \doxysubsection*{Classes}
@@ -12,48 +21,203 @@ struct \mbox{\hyperlink{struct_d_base_1_1measurement}{measurement}}
 \doxysubsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_d_base_a2089d8c0a7939555d0e388b3a8e6cbcc}\label{class_d_base_a2089d8c0a7939555d0e388b3a8e6cbcc}} 
-{\bfseries D\+Base} (const Q\+String \&hostname, const Q\+String \&username, const Q\+String \&password, const Q\+String \&name)
-\item 
-\mbox{\Hypertarget{class_d_base_a1d69f7443cc21928794dfaa898f49c09}\label{class_d_base_a1d69f7443cc21928794dfaa898f49c09}} 
-bool {\bfseries is\+Open} () const
-\item 
-\mbox{\Hypertarget{class_d_base_a61f8a8530324221ef5bd4861e2724cb9}\label{class_d_base_a61f8a8530324221ef5bd4861e2724cb9}} 
-void {\bfseries get\+Recent\+Measurements} (const Q\+String \&filter, const Q\+String \&date)
-\item 
-\mbox{\Hypertarget{class_d_base_a4445126c41a6020b2a71c58f2e50646e}\label{class_d_base_a4445126c41a6020b2a71c58f2e50646e}} 
-void {\bfseries generate\+Sample\+Data} (unsigned amount)
-\item 
-\mbox{\Hypertarget{class_d_base_a1f5bf34646da0d763dc9c30cbcf0b4d5}\label{class_d_base_a1f5bf34646da0d763dc9c30cbcf0b4d5}} 
-double {\bfseries f\+Rand} (double f\+Min, double f\+Max)
-\item 
-\mbox{\Hypertarget{class_d_base_a9420e43c16bd790cc70006c90b357611}\label{class_d_base_a9420e43c16bd790cc70006c90b357611}} 
-double {\bfseries round} (double var)
-\end{DoxyCompactItemize}
+\mbox{\hyperlink{class_d_base_a2089d8c0a7939555d0e388b3a8e6cbcc}{D\+Base}} (const Q\+String \&hostname, const Q\+String \&username, const Q\+String \&password, const Q\+String \&name)
+\begin{DoxyCompactList}\small\item\em Creates the database connection. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{class_d_base_a481a55eb6cdcede4f3d170609571a108}{$\sim$\+D\+Base}} ()
+\begin{DoxyCompactList}\small\item\em Destroys the database connection. \end{DoxyCompactList}\item 
+bool \mbox{\hyperlink{class_d_base_a1d69f7443cc21928794dfaa898f49c09}{is\+Open}} () const
+\begin{DoxyCompactList}\small\item\em Checks if the connection is made with the database server. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_d_base_a61f8a8530324221ef5bd4861e2724cb9}{get\+Recent\+Measurements}} (const Q\+String \&filter, const Q\+String \&date)
+\begin{DoxyCompactList}\small\item\em Gets the measurements from the database based on the type and date values. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{class_d_base_a4445126c41a6020b2a71c58f2e50646e}{generate\+Sample\+Data}} (unsigned amount)
+\begin{DoxyCompactList}\small\item\em Generates fake sample data to work with some data. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_d_base_a1f5bf34646da0d763dc9c30cbcf0b4d5}{f\+Rand}} (double f\+Min, double f\+Max)
+\begin{DoxyCompactList}\small\item\em Generates random value between f\+Min and f\+Max. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{class_d_base_a9420e43c16bd790cc70006c90b357611}{round}} (double var)
+\begin{DoxyCompactList}\small\item\em Round-\/up a double value. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Public Attributes}
 \begin{DoxyCompactItemize}
 \item 
-\mbox{\Hypertarget{class_d_base_a77c92925b0919e3f1ebcc38586145539}\label{class_d_base_a77c92925b0919e3f1ebcc38586145539}} 
-struct \mbox{\hyperlink{struct_d_base_1_1measurement}{D\+Base\+::measurement}} {\bfseries measurements} \mbox{[}60\mbox{]}
-\item 
+struct \mbox{\hyperlink{struct_d_base_1_1measurement}{D\+Base\+::measurement}} \mbox{\hyperlink{class_d_base_ad1086248c5ef0a14d288b974db4345cb}{measurements}} \mbox{[}60\mbox{]}
+\begin{DoxyCompactList}\small\item\em Holds 60 samples of measurement data. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_d_base_aaa68a7ba7fbdf163754e6faf53331692}\label{class_d_base_aaa68a7ba7fbdf163754e6faf53331692}} 
-int {\bfseries total\+Measurements}
-\item 
-\mbox{\Hypertarget{class_d_base_ab77cec0b55b28ab288d75669ac7d53d8}\label{class_d_base_ab77cec0b55b28ab288d75669ac7d53d8}} 
-int {\bfseries page}
-\item 
+int \mbox{\hyperlink{class_d_base_aaa68a7ba7fbdf163754e6faf53331692}{total\+Measurements}}
+\begin{DoxyCompactList}\small\item\em Holds the data of the total amount of measurements that is currently available. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{class_d_base_ab77cec0b55b28ab288d75669ac7d53d8}{page}}
+\begin{DoxyCompactList}\small\item\em Holds the current page the view layer has to show. \end{DoxyCompactList}\item 
 \mbox{\Hypertarget{class_d_base_af38296e9b7e5b7a0e66de2222c5fec7d}\label{class_d_base_af38296e9b7e5b7a0e66de2222c5fec7d}} 
-int {\bfseries range}
-\end{DoxyCompactItemize}
+int \mbox{\hyperlink{class_d_base_af38296e9b7e5b7a0e66de2222c5fec7d}{range}}
+\begin{DoxyCompactList}\small\item\em As the data shrinks less measurements are available. The page calculates how many measurements on the page are allowed to show. \end{DoxyCompactList}\end{DoxyCompactItemize}
 \doxysubsection*{Private Attributes}
 \begin{DoxyCompactItemize}
 \item 
 \mbox{\Hypertarget{class_d_base_a0e78d6ee313e0ff4cf062f3d4852a666}\label{class_d_base_a0e78d6ee313e0ff4cf062f3d4852a666}} 
-Q\+Sql\+Database {\bfseries m\+\_\+db}
-\end{DoxyCompactItemize}
+Q\+Sql\+Database \mbox{\hyperlink{class_d_base_a0e78d6ee313e0ff4cf062f3d4852a666}{m\+\_\+db}}
+\begin{DoxyCompactList}\small\item\em The database variable which deals with the database server. \end{DoxyCompactList}\end{DoxyCompactItemize}
 
+
+\doxysubsection{Detailed Description}
+The data layer class. 
+
+In the data layer every aspect of communication with the database is managed by this class. 
+
+\doxysubsection{Constructor \& Destructor Documentation}
+\mbox{\Hypertarget{class_d_base_a2089d8c0a7939555d0e388b3a8e6cbcc}\label{class_d_base_a2089d8c0a7939555d0e388b3a8e6cbcc}} 
+\index{DBase@{DBase}!DBase@{DBase}}
+\index{DBase@{DBase}!DBase@{DBase}}
+\doxysubsubsection{\texorpdfstring{DBase()}{DBase()}}
+{\footnotesize\ttfamily D\+Base\+::\+D\+Base (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{hostname,  }\item[{const Q\+String \&}]{username,  }\item[{const Q\+String \&}]{password,  }\item[{const Q\+String \&}]{name }\end{DoxyParamCaption})}
+
+
+
+Creates the database connection. 
+
+The constructor. \begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_d_base_a481a55eb6cdcede4f3d170609571a108}\label{class_d_base_a481a55eb6cdcede4f3d170609571a108}} 
+\index{DBase@{DBase}!````~DBase@{$\sim$DBase}}
+\index{````~DBase@{$\sim$DBase}!DBase@{DBase}}
+\doxysubsubsection{\texorpdfstring{$\sim$DBase()}{~DBase()}}
+{\footnotesize\ttfamily D\+Base\+::$\sim$\+D\+Base (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption})}
+
+
+
+Destroys the database connection. 
+
+The destructor. \begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+
+
+\doxysubsection{Member Function Documentation}
+\mbox{\Hypertarget{class_d_base_a1f5bf34646da0d763dc9c30cbcf0b4d5}\label{class_d_base_a1f5bf34646da0d763dc9c30cbcf0b4d5}} 
+\index{DBase@{DBase}!fRand@{fRand}}
+\index{fRand@{fRand}!DBase@{DBase}}
+\doxysubsubsection{\texorpdfstring{fRand()}{fRand()}}
+{\footnotesize\ttfamily double D\+Base\+::f\+Rand (\begin{DoxyParamCaption}\item[{double}]{f\+Min,  }\item[{double}]{f\+Max }\end{DoxyParamCaption})}
+
+
+
+Generates random value between f\+Min and f\+Max. 
+
+\begin{DoxyWarning}{Warning}
+Only for testing purposes. 
+\end{DoxyWarning}
+\begin{DoxyPrecond}{Precondition}
+Date must be a valid date in the format of for e.\+g.\+: 2020-\/10-\/25. 
+\end{DoxyPrecond}
+
+\begin{DoxyParams}{Parameters}
+{\em f\+Min} & \\
+\hline
+{\em f\+Max} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_d_base_a4445126c41a6020b2a71c58f2e50646e}\label{class_d_base_a4445126c41a6020b2a71c58f2e50646e}} 
+\index{DBase@{DBase}!generateSampleData@{generateSampleData}}
+\index{generateSampleData@{generateSampleData}!DBase@{DBase}}
+\doxysubsubsection{\texorpdfstring{generateSampleData()}{generateSampleData()}}
+{\footnotesize\ttfamily void D\+Base\+::generate\+Sample\+Data (\begin{DoxyParamCaption}\item[{unsigned}]{amount }\end{DoxyParamCaption})}
+
+
+
+Generates fake sample data to work with some data. 
+
+\begin{DoxyWarning}{Warning}
+Only for testing purposes. 
+\end{DoxyWarning}
+\begin{DoxyPrecond}{Precondition}
+Date must be a valid date in the format ex\+: 2020-\/10-\/25. 
+\end{DoxyPrecond}
+
+\begin{DoxyParams}{Parameters}
+{\em amount} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_d_base_a61f8a8530324221ef5bd4861e2724cb9}\label{class_d_base_a61f8a8530324221ef5bd4861e2724cb9}} 
+\index{DBase@{DBase}!getRecentMeasurements@{getRecentMeasurements}}
+\index{getRecentMeasurements@{getRecentMeasurements}!DBase@{DBase}}
+\doxysubsubsection{\texorpdfstring{getRecentMeasurements()}{getRecentMeasurements()}}
+{\footnotesize\ttfamily void D\+Base\+::get\+Recent\+Measurements (\begin{DoxyParamCaption}\item[{const Q\+String \&}]{filter,  }\item[{const Q\+String \&}]{date }\end{DoxyParamCaption})}
+
+
+
+Gets the measurements from the database based on the type and date values. 
+
+\begin{DoxyReturn}{Returns}
+void 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_d_base_a1d69f7443cc21928794dfaa898f49c09}\label{class_d_base_a1d69f7443cc21928794dfaa898f49c09}} 
+\index{DBase@{DBase}!isOpen@{isOpen}}
+\index{isOpen@{isOpen}!DBase@{DBase}}
+\doxysubsubsection{\texorpdfstring{isOpen()}{isOpen()}}
+{\footnotesize\ttfamily bool D\+Base\+::is\+Open (\begin{DoxyParamCaption}{ }\end{DoxyParamCaption}) const}
+
+
+
+Checks if the connection is made with the database server. 
+
+\begin{DoxyReturn}{Returns}
+boolean 
+\end{DoxyReturn}
+\mbox{\Hypertarget{class_d_base_a9420e43c16bd790cc70006c90b357611}\label{class_d_base_a9420e43c16bd790cc70006c90b357611}} 
+\index{DBase@{DBase}!round@{round}}
+\index{round@{round}!DBase@{DBase}}
+\doxysubsubsection{\texorpdfstring{round()}{round()}}
+{\footnotesize\ttfamily double D\+Base\+::round (\begin{DoxyParamCaption}\item[{double}]{var }\end{DoxyParamCaption})}
+
+
+
+Round-\/up a double value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em var} & \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double 
+\end{DoxyReturn}
+Example\+: 
+\begin{DoxyCode}{0}
+\DoxyCodeLine{17.66666 * 100 = 1766.66}
+\DoxyCodeLine{1766.66 + .5 = 1767.16 \textcolor{keywordflow}{for} rounding off value}
+\DoxyCodeLine{then type cast to \textcolor{keywordtype}{int} so value is 1767}
+\DoxyCodeLine{then divided by 100 so the value converted into 17.67}
+\end{DoxyCode}
+
+
+\doxysubsection{Member Data Documentation}
+\mbox{\Hypertarget{class_d_base_ad1086248c5ef0a14d288b974db4345cb}\label{class_d_base_ad1086248c5ef0a14d288b974db4345cb}} 
+\index{DBase@{DBase}!measurements@{measurements}}
+\index{measurements@{measurements}!DBase@{DBase}}
+\doxysubsubsection{\texorpdfstring{measurements}{measurements}}
+{\footnotesize\ttfamily struct \mbox{\hyperlink{struct_d_base_1_1measurement}{measurement}} Q\+String type value date D\+Base\+::measurements\mbox{[}60\mbox{]}}
+
+
+
+Holds 60 samples of measurement data. 
+
+The data is stored in this array before it is passed down to the chart widget. \mbox{\Hypertarget{class_d_base_ab77cec0b55b28ab288d75669ac7d53d8}\label{class_d_base_ab77cec0b55b28ab288d75669ac7d53d8}} 
+\index{DBase@{DBase}!page@{page}}
+\index{page@{page}!DBase@{DBase}}
+\doxysubsubsection{\texorpdfstring{page}{page}}
+{\footnotesize\ttfamily int D\+Base\+::page}
+
+
+
+Holds the current page the view layer has to show. 
+
+The page indicates that 60 measurements may be shown by the view layer. 
 
 The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
 \item 
-C\+:/git/projects/weather\+\_\+station/qt/weerstation/dbase.\+h\item 
-C\+:/git/projects/weather\+\_\+station/qt/weerstation/dbase.\+cpp\end{DoxyCompactItemize}
+weerstation/\mbox{\hyperlink{dbase_8h}{dbase.\+h}}\item 
+weerstation/dbase.\+cpp\end{DoxyCompactItemize}

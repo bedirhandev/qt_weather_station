@@ -30,54 +30,54 @@
 \contentsline {subsection}{\numberline {8.1.4}Member Data Documentation}{19}{subsection.8.1.4}%
 \contentsline {subsubsection}{\numberline {8.1.4.1}measurements}{19}{subsubsection.8.1.4.1}%
 \contentsline {subsubsection}{\numberline {8.1.4.2}page}{19}{subsubsection.8.1.4.2}%
-\contentsline {section}{\numberline {8.2}Main\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Window Class Reference}{19}{section.8.2}%
-\contentsline {subsection}{\numberline {8.2.1}Detailed Description}{21}{subsection.8.2.1}%
-\contentsline {subsection}{\numberline {8.2.2}Constructor \& Destructor Documentation}{21}{subsection.8.2.2}%
-\contentsline {subsubsection}{\numberline {8.2.2.1}MainWindow()}{21}{subsubsection.8.2.2.1}%
-\contentsline {subsubsection}{\numberline {8.2.2.2}$\sim $MainWindow()}{21}{subsubsection.8.2.2.2}%
+\contentsline {section}{\numberline {8.2}Main\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Window Class Reference}{20}{section.8.2}%
+\contentsline {subsection}{\numberline {8.2.1}Detailed Description}{22}{subsection.8.2.1}%
+\contentsline {subsection}{\numberline {8.2.2}Constructor \& Destructor Documentation}{22}{subsection.8.2.2}%
+\contentsline {subsubsection}{\numberline {8.2.2.1}MainWindow()}{22}{subsubsection.8.2.2.1}%
+\contentsline {subsubsection}{\numberline {8.2.2.2}$\sim $MainWindow()}{22}{subsubsection.8.2.2.2}%
 \contentsline {subsection}{\numberline {8.2.3}Member Function Documentation}{22}{subsection.8.2.3}%
 \contentsline {subsubsection}{\numberline {8.2.3.1}addItemToGridLayout()}{22}{subsubsection.8.2.3.1}%
-\contentsline {subsubsection}{\numberline {8.2.3.2}generateSampleData()}{22}{subsubsection.8.2.3.2}%
-\contentsline {subsubsection}{\numberline {8.2.3.3}getDate()}{22}{subsubsection.8.2.3.3}%
+\contentsline {subsubsection}{\numberline {8.2.3.2}generateSampleData()}{23}{subsubsection.8.2.3.2}%
+\contentsline {subsubsection}{\numberline {8.2.3.3}getDate()}{23}{subsubsection.8.2.3.3}%
 \contentsline {subsubsection}{\numberline {8.2.3.4}nextButton}{23}{subsubsection.8.2.3.4}%
-\contentsline {subsubsection}{\numberline {8.2.3.5}prevButton}{23}{subsubsection.8.2.3.5}%
-\contentsline {subsubsection}{\numberline {8.2.3.6}refreshButton}{23}{subsubsection.8.2.3.6}%
-\contentsline {subsubsection}{\numberline {8.2.3.7}removeItemFromGridLayout()}{23}{subsubsection.8.2.3.7}%
+\contentsline {subsubsection}{\numberline {8.2.3.5}prevButton}{24}{subsubsection.8.2.3.5}%
+\contentsline {subsubsection}{\numberline {8.2.3.6}refreshButton}{24}{subsubsection.8.2.3.6}%
+\contentsline {subsubsection}{\numberline {8.2.3.7}removeItemFromGridLayout()}{24}{subsubsection.8.2.3.7}%
 \contentsline {subsubsection}{\numberline {8.2.3.8}setDate()}{24}{subsubsection.8.2.3.8}%
-\contentsline {subsubsection}{\numberline {8.2.3.9}setMeasurements()}{24}{subsubsection.8.2.3.9}%
-\contentsline {subsubsection}{\numberline {8.2.3.10}setupButton()}{24}{subsubsection.8.2.3.10}%
-\contentsline {subsubsection}{\numberline {8.2.3.11}setupChart()}{25}{subsubsection.8.2.3.11}%
-\contentsline {subsubsection}{\numberline {8.2.3.12}setupDatabase()}{25}{subsubsection.8.2.3.12}%
-\contentsline {subsubsection}{\numberline {8.2.3.13}setupWindow()}{26}{subsubsection.8.2.3.13}%
-\contentsline {subsubsection}{\numberline {8.2.3.14}updateButtons()}{26}{subsubsection.8.2.3.14}%
-\contentsline {subsubsection}{\numberline {8.2.3.15}updateChart()}{26}{subsubsection.8.2.3.15}%
-\contentsline {subsection}{\numberline {8.2.4}Member Data Documentation}{27}{subsection.8.2.4}%
-\contentsline {subsubsection}{\numberline {8.2.4.1}dateInputField}{27}{subsubsection.8.2.4.1}%
-\contentsline {subsubsection}{\numberline {8.2.4.2}dbase}{27}{subsubsection.8.2.4.2}%
-\contentsline {subsubsection}{\numberline {8.2.4.3}ui}{27}{subsubsection.8.2.4.3}%
+\contentsline {subsubsection}{\numberline {8.2.3.9}setMeasurements()}{25}{subsubsection.8.2.3.9}%
+\contentsline {subsubsection}{\numberline {8.2.3.10}setupButton()}{25}{subsubsection.8.2.3.10}%
+\contentsline {subsubsection}{\numberline {8.2.3.11}setupChart()}{26}{subsubsection.8.2.3.11}%
+\contentsline {subsubsection}{\numberline {8.2.3.12}setupDatabase()}{26}{subsubsection.8.2.3.12}%
+\contentsline {subsubsection}{\numberline {8.2.3.13}setupWindow()}{27}{subsubsection.8.2.3.13}%
+\contentsline {subsubsection}{\numberline {8.2.3.14}updateButtons()}{27}{subsubsection.8.2.3.14}%
+\contentsline {subsubsection}{\numberline {8.2.3.15}updateChart()}{27}{subsubsection.8.2.3.15}%
+\contentsline {subsection}{\numberline {8.2.4}Member Data Documentation}{28}{subsection.8.2.4}%
+\contentsline {subsubsection}{\numberline {8.2.4.1}dateInputField}{28}{subsubsection.8.2.4.1}%
+\contentsline {subsubsection}{\numberline {8.2.4.2}dbase}{28}{subsubsection.8.2.4.2}%
+\contentsline {subsubsection}{\numberline {8.2.4.3}ui}{28}{subsubsection.8.2.4.3}%
 \contentsline {section}{\numberline {8.3}D\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Base\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}::measurement Struct Reference}{28}{section.8.3}%
-\contentsline {section}{\numberline {8.4}W\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Chart Class Reference}{28}{section.8.4}%
-\contentsline {subsection}{\numberline {8.4.1}Detailed Description}{29}{subsection.8.4.1}%
-\contentsline {subsection}{\numberline {8.4.2}Constructor \& Destructor Documentation}{29}{subsection.8.4.2}%
-\contentsline {subsubsection}{\numberline {8.4.2.1}WChart()}{29}{subsubsection.8.4.2.1}%
-\contentsline {subsubsection}{\numberline {8.4.2.2}$\sim $WChart()}{30}{subsubsection.8.4.2.2}%
-\contentsline {subsection}{\numberline {8.4.3}Member Function Documentation}{30}{subsection.8.4.3}%
-\contentsline {subsubsection}{\numberline {8.4.3.1}getMaxRangeYAxis()}{30}{subsubsection.8.4.3.1}%
-\contentsline {subsubsection}{\numberline {8.4.3.2}getMinRangeYAxis()}{30}{subsubsection.8.4.3.2}%
-\contentsline {subsubsection}{\numberline {8.4.3.3}getTitleChart()}{31}{subsubsection.8.4.3.3}%
-\contentsline {subsubsection}{\numberline {8.4.3.4}getTitleXAxis()}{31}{subsubsection.8.4.3.4}%
-\contentsline {subsubsection}{\numberline {8.4.3.5}getTitleYAxis()}{31}{subsubsection.8.4.3.5}%
-\contentsline {subsubsection}{\numberline {8.4.3.6}getType()}{31}{subsubsection.8.4.3.6}%
-\contentsline {subsubsection}{\numberline {8.4.3.7}render()}{32}{subsubsection.8.4.3.7}%
-\contentsline {subsubsection}{\numberline {8.4.3.8}setAxesTickCount()}{32}{subsubsection.8.4.3.8}%
-\contentsline {subsubsection}{\numberline {8.4.3.9}setData()}{32}{subsubsection.8.4.3.9}%
-\contentsline {subsubsection}{\numberline {8.4.3.10}setRangeYAxis()}{32}{subsubsection.8.4.3.10}%
-\contentsline {subsubsection}{\numberline {8.4.3.11}setType()}{33}{subsubsection.8.4.3.11}%
-\contentsline {chapter}{\numberline {9}File Documentation}{35}{chapter.9}%
-\contentsline {section}{\numberline {9.1}weerstation/dbase.h File Reference}{35}{section.9.1}%
-\contentsline {subsection}{\numberline {9.1.1}Detailed Description}{35}{subsection.9.1.1}%
-\contentsline {section}{\numberline {9.2}weerstation/mainwindow.h File Reference}{35}{section.9.2}%
-\contentsline {subsection}{\numberline {9.2.1}Detailed Description}{36}{subsection.9.2.1}%
-\contentsline {section}{\numberline {9.3}weerstation/wchart.h File Reference}{36}{section.9.3}%
-\contentsline {subsection}{\numberline {9.3.1}Detailed Description}{36}{subsection.9.3.1}%
-\contentsline {chapter}{Index}{37}{section*.18}%
+\contentsline {section}{\numberline {8.4}W\discretionary {\mbox {\scriptsize $\hookleftarrow $}}{}{}Chart Class Reference}{29}{section.8.4}%
+\contentsline {subsection}{\numberline {8.4.1}Detailed Description}{30}{subsection.8.4.1}%
+\contentsline {subsection}{\numberline {8.4.2}Constructor \& Destructor Documentation}{31}{subsection.8.4.2}%
+\contentsline {subsubsection}{\numberline {8.4.2.1}WChart()}{31}{subsubsection.8.4.2.1}%
+\contentsline {subsubsection}{\numberline {8.4.2.2}$\sim $WChart()}{31}{subsubsection.8.4.2.2}%
+\contentsline {subsection}{\numberline {8.4.3}Member Function Documentation}{31}{subsection.8.4.3}%
+\contentsline {subsubsection}{\numberline {8.4.3.1}getMaxRangeYAxis()}{32}{subsubsection.8.4.3.1}%
+\contentsline {subsubsection}{\numberline {8.4.3.2}getMinRangeYAxis()}{32}{subsubsection.8.4.3.2}%
+\contentsline {subsubsection}{\numberline {8.4.3.3}getTitleChart()}{32}{subsubsection.8.4.3.3}%
+\contentsline {subsubsection}{\numberline {8.4.3.4}getTitleXAxis()}{32}{subsubsection.8.4.3.4}%
+\contentsline {subsubsection}{\numberline {8.4.3.5}getTitleYAxis()}{33}{subsubsection.8.4.3.5}%
+\contentsline {subsubsection}{\numberline {8.4.3.6}getType()}{33}{subsubsection.8.4.3.6}%
+\contentsline {subsubsection}{\numberline {8.4.3.7}render()}{33}{subsubsection.8.4.3.7}%
+\contentsline {subsubsection}{\numberline {8.4.3.8}setAxesTickCount()}{33}{subsubsection.8.4.3.8}%
+\contentsline {subsubsection}{\numberline {8.4.3.9}setData()}{34}{subsubsection.8.4.3.9}%
+\contentsline {subsubsection}{\numberline {8.4.3.10}setRangeYAxis()}{34}{subsubsection.8.4.3.10}%
+\contentsline {subsubsection}{\numberline {8.4.3.11}setType()}{34}{subsubsection.8.4.3.11}%
+\contentsline {chapter}{\numberline {9}File Documentation}{37}{chapter.9}%
+\contentsline {section}{\numberline {9.1}weerstation/dbase.h File Reference}{37}{section.9.1}%
+\contentsline {subsection}{\numberline {9.1.1}Detailed Description}{38}{subsection.9.1.1}%
+\contentsline {section}{\numberline {9.2}weerstation/mainwindow.h File Reference}{38}{section.9.2}%
+\contentsline {subsection}{\numberline {9.2.1}Detailed Description}{39}{subsection.9.2.1}%
+\contentsline {section}{\numberline {9.3}weerstation/wchart.h File Reference}{39}{section.9.3}%
+\contentsline {subsection}{\numberline {9.3.1}Detailed Description}{39}{subsection.9.3.1}%
+\contentsline {chapter}{Index}{41}{section*.28}%

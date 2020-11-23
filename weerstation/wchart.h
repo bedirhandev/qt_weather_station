@@ -9,8 +9,6 @@
 #include <QWidget>
 #include <QLineSeries>
 #include <QtCharts/QChartView>
-#include <QtCharts/QBarCategoryAxis>
-#include <QtCharts/QBarSeries>
 #include <QtCharts/QValueAxis>
 #include <QDateTimeAxis>
 
